@@ -19,7 +19,7 @@
 
 # feature
 
-### - Authentication and Authorization
+### - Authentication and Authorization of user 
 ### - A RESTful API for the backend
 ### - A web client using Thymeleaf which consumes the REST API
 ### - Unit and Integration Testing
