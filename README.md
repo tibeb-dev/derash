@@ -1,11 +1,11 @@
 # derash
 
 ### derash is a web app developed by . 
-  #### kidus sintayehu ugr/8503/12 
-  #### fenet shewarega  UGR/9003/12
-  #### Dagim Fikru  UGR/4328/12 
-  #### Seblewongel Girmaw UGR/5682/12 
-  #### Degsw Abebaw  UGR/1341/12 
+  #### - kidus sintayehu ugr/8503/12 
+  #### - fenet shewarega  UGR/9003/12
+  #### - Dagim Fikru  UGR/4328/12 
+  #### - Seblewongel Girmaw UGR/5682/12 
+  #### - Degsw Abebaw  UGR/1341/12 
   
 # description
 
