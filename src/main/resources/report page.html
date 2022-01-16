@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="container "> 
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                
+                <div class="collapse navbar-collapse bg-secondary" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="text-info"  href="#">Home</a>
+                      </li>
+                    
+                      
+                    </ul>
+                    
+                      <form>
+                        <input  class=" btn-success" type="submit" value="Logout"/>
+                      </form>
+                    
+                </div>
+                
+            </nav>
+        </div> 
+        <div class="container">
+            <h1>fill the the form ...</h1>
+        </div>
+        <form>
+            <div class="mb-3">
+                <label for="location" class="form-label">location</label>
+                <input type="text" class="form-control" name="location" id="location" >
+              </div>
+              <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" name="date" id="date" >
+              </div>
+              <div class="mb-3">
+                <label for="time" class="form-label"> Local time </label>
+                <input type="time" class="form-control"  name="time" id="time" >
+              </div>
+             
+              <div class="mb-3">
+                <label for="description" class="form-label">Describe the  incident</label>
+                <textarea class="form-control" name="description" id="description" rows="6"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="image" class="form-label">Add some images(if possible) </label>
+                <input type="file" class="form-control" name="image" id="image"   multiple="multiple">
+              </div>
+    
+              <button type="submit" class="btn btn-info">Submit</button>
+
+        </form>
+        
+         
+
+    </div>
+   
+</body>
+</html>
