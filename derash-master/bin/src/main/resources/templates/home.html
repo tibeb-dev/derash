@@ -4,14 +4,14 @@
 <head>
     <title>home page</title>
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
 
 </head>
 
 <body>
 
     <div class="bg-image" style="
-        background-image: url('images/home2.webp');
+        background-image: url('../static/images/home2.webp');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         height:80rem;
@@ -20,7 +20,7 @@
         <div class="logo">
 
 
-            <img id="logo" src="images/logoo.jpg" class="img-fluid" alt="Responsive image" width="300"
+            <img id="logo" src="../static/images/logoo.jpg" class="img-fluid" alt="Responsive image" width="300"
                 height="150">
         </div>
         <div class="container">
@@ -37,7 +37,7 @@
         <div id="button" class="container">
 
             <button type="button" class="btn btn-primary btn-lg">
-                <a th:href="@{/signUp}"> Sign Up</a>
+                <a href="signup page.html"> Sign Up</a>
 
             </button>
             <button type="button" class="btn btn-secondary btn-lg">
@@ -45,9 +45,9 @@
             </button>
         </div>
         <div id="s1" class="container">
-            <img src="images/S1.jpg" class="img-fluid" alt="Responsive image" width="300" height="150"
+            <img src="../static/images/S1.jpg" class="img-fluid" alt="Responsive image" width="300" height="150"
                 align='right'>
-            <img src="images/Q2.jpg" class="img-fluid" alt="Responsive image" width="300" height="150">
+            <img src="../static/images/Q2.jpg" class="img-fluid" alt="Responsive image" width="300" height="150">
         </div>
     </div>
 
