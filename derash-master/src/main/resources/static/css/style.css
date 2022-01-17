@@ -1,0 +1,74 @@
+html,body{
+    
+    font-family: 'Numans', sans-serif;
+    }
+    
+#logo{
+    border-radius: 50%;
+    margin-left: 10rem;
+}
+h1{
+    font-size: 5rem;
+    color: white;
+    margin-left: 15rem;
+
+}
+#aboutus{
+    width: 30rem;
+    border-radius: 0.8rem;
+    background-color: white;
+    margin-left: 10rem;
+    height: 25rem;
+    margin-top: 10rem;
+}
+h3{
+    margin-left: 4rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+p{
+    margin-left: 2rem;
+    font-size: 1.2rem;
+}
+#button{
+    margin-left: 30rem;
+    margin-top: 2rem;
+    
+}
+/* .btn btn-primary btn-lg{
+    font-size: 30rem;
+} */
+#footer{
+    background-color: black;
+    height: 10rem;
+    width: 100%;
+
+}
+#q2{
+     margin-top: 1rem; 
+     margin-left: 2rem;
+     border-radius: 3rem;
+
+}
+button{
+    font-size: 2rem;
+    margin-left: 2rem;
+    background-color:lightseagreen;
+    border-radius: 1rem;
+}
+#s1{
+    margin-top:4rem;
+    margin-right: 2rem;
+
+}
+ #con{
+    
+    margin-left: 28rem;
+    margin-top: -8rem;
+    color: white;
+} 
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
