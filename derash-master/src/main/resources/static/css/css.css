@@ -95,8 +95,5 @@ background-color: white;
 
 .links{
 color: white;
-}
-
-.links a{
-margin-left: 4px;
+padding : 12px 0 0 0;
 }
