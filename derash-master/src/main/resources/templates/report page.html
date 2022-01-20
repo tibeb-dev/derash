@@ -2,67 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>form page</title>
+    <title>Report</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/report.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
-<body>
-    <div class="container">
-        
-        <div class="container "> 
-            <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-                
-                
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="text-info"  href="/">Home</a>
-                      </li>
-                    
-                      
-                    </ul>
-                    
-                      <form>
-                        <input  class=" btn-success" type="submit" value="Logout"/>
-                      </form>
-                    
-               
-                
-            </nav>
-          </div> 
-        <div class="container">
-            <h1>fill the the form ...</h1>
-        </div>
-        <form>
-            <div class="mb-3">
-                <label for="location" class="form-label">location</label>
-                <input type="text" class="form-control" name="location" id="location" >
+<body >
+    <div>
+        <header>
+            <h1>Fill the forms below to submit your report</h1>
+        </header>
+      <form>
+        <div class="form">
+            <div>
+              <div class="contact-form">
+                  <input type="text" required>
+                  <span>Location :</span>
+                  
               </div>
-              <div class="mb-3">
-                <label for="date" class="form-label">Date</label>
-                <input type="date" class="form-control" name="date" id="date" >
+  
+              <div class="contact-form">
+                  <input type="date" required>
+                  <span>Date :</span>
               </div>
-              <div class="mb-3">
-                <label for="time" class="form-label"> Local time </label>
-                <input type="time" class="form-control"  name="time" id="time" >
+              <div class="contact-form">
+                <input type="time" required>
+                <span>Time :</span>
+            </div>
+              <div class="contact-form">
+                  <textarea name="text"> 
+                  </textarea>
+                  <span>Describe the incident :</span>
               </div>
-             
-              <div class="mb-3">
-                <label for="description" class="form-label">Describe the  incident</label>
-                <textarea class="form-control" name="description" id="description" rows="6"></textarea>
+              <div class="contact-form">
+                <input type="file" required>
+                <span>Add image or video(if possible) :</span>
+            </div>
+                     <div class="contact-form">
+                  <input type="submit" name="submit">
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="image" class="form-label">Add some images(if possible) </label>
-                <input type="file" class="form-control" name="image" id="image"   multiple="multiple">
               </div>
-    
-              <button type="submit" class="btn btn-info">Submit</button>
-
-        </form>
-        
-         
-
-    </div>
-   
+            </div>
+          </div>     
+    </form>
+    <div class="logout"><a href="#">Logout</a></div>
 </body>
 </html>
