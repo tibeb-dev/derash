@@ -24,6 +24,10 @@ align-content: center;
     border-color: gray;
     }
 
+.error {
+        color: red;
+    }
+
 .card{
 height: 350px;
 margin-top: auto;

@@ -2,9 +2,13 @@ package com.webproject.derash;
 import java.io.Serializable;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+//import javax.validation.constraints.Pattern;
+//import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+
 
 
 @Entity
@@ -16,13 +20,11 @@ public class LoginPage implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     
-    @Size(min = 5, message = "Name must be at least 5 characters long")
-    @Column(nullable = false, unique = true, length = 45)
-    @NotBlank(message = "email mustnot be empty")
-
+    @Email(message = "Email should be valid")
     private String email;
 
-    @Size(min = 8, message = "password must be atleast 8 character long and atmost 64 character")
+    @Size(min = 8, max = 64, 
+    		message = "password must be atleast 8 character long and atmost 64 character")
     @Column(nullable = false, length = 64)
     @NotBlank(message = "password mustnot be empty")
     private String password;
