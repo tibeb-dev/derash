@@ -1,74 +1,59 @@
-html,body{
-    
-    font-family: 'Numans', sans-serif;
-    }
-    
-#logo{
-    border-radius: 50%;
-    margin-left: 10rem;
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: "Raleway", sans-serif;
+  color: rgb(61, 59, 59);
 }
-h1{
-    font-size: 5rem;
-    color: white;
-    margin-left: 15rem;
-
+.derash {
+  height: 100vh;
+  width: 100%;
+  background: url("../images/bgblurr.png"), url("../images/derash.jpg");
+  background-position: top;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
 }
-#aboutus{
-    width: 30rem;
-    border-radius: 0.8rem;
-    background-color: white;
-    margin-left: 10rem;
-    height: 25rem;
-    margin-top: 10rem;
+.derash .navbar {
+  margin-top: 4%;
 }
-h3{
-    margin-left: 4rem;
-    font-size: 3rem;
-    font-weight: bold;
+.derash .nav li a {
+  color: rgb(245, 244, 244);
+  font-size: 1.2em;
+  font-weight: bolder;
 }
-p{
-    margin-left: 2rem;
-    font-size: 1.2rem;
+.derash .nav li a:hover {
+  color: white;
+  background-color: black;
+  text-decoration: underline;
 }
-#button{
-    margin-left: 30rem;
-    margin-top: 2rem;
-    
+.derash .info {
+  margin-top: 15%;
+  transform: translateY(-15%);
 }
-/* .btn btn-primary btn-lg{
-    font-size: 30rem;
-} */
-#footer{
-    background-color: black;
-    height: 10rem;
-    width: 100%;
-
+.derash .info h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: rgb(202, 202, 202);
+  letter-spacing: 2px;
+  text-decoration: underline;
 }
-#q2{
-     margin-top: 1rem; 
-     margin-left: 2rem;
-     border-radius: 3rem;
-
+.derash .info p {
+  font-size: 2em;
+  font-weight: 500;
+  color: rgb(250, 250, 250);
+  font-weight: bolder;
+  letter-spacing: 3px;
 }
-button{
-    font-size: 2rem;
-    margin-left: 2rem;
-    background-color:lightseagreen;
-    border-radius: 1rem;
+.derash .info a {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background: #028b27;
+  padding: 10px 20px;
+  font-size: 2em;
+  font-weight: bold;
 }
-#s1{
-    margin-top:4rem;
-    margin-right: 2rem;
-
-}
- #con{
-    
-    margin-left: 28rem;
-    margin-top: -8rem;
-    color: white;
-} 
-a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+.derash .info a:hover {
+  background: #0e0005;
+  text-decoration: underline;
 }

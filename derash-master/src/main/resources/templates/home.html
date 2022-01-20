@@ -1,76 +1,38 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-
+<html>
 <head>
-    <title>home page</title>
-    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
+	<meta charset="utf-8">
+	<meta name="viewreport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
-
 <body>
-
-    <div class="bg-image" style="
-        background-image: url('images/home2.webp');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        height:80rem;
-        
-      ">
-        <div class="logo">
-
-
-            <img id="logo" src="images/logoo.jpg" class="img-fluid" alt="Responsive image" width="300"
-                height="150">
-        </div>
-        <div class="container">
-            <h1>Criminal Case Solver</h1>
-        </div>
-
-        <div id="aboutus" class="container">
-            <h3>About Us</h3>
-            <p>Derash is a web-based tool that prevents crime in our country. 
-                Our aim is to help our society at the center of everything we do. One of our key considerations is punctuality. As we all know, our country is in the midst of a strenuous effort to lift itself out of poverty. Crime instances are the ones that add to our country's already high levels. Here we are beginning to look for solutions to reduce these incidents, and one of them is through our web program, which assists society by providing on-demand assistance from police stations. 
-                We believe that tour "Derash" will bring about change in our dear country in the near future.</p>
-        </div>
-
-        <div id="button" class="container">
-
-            <button type="button" class="btn btn-primary btn-lg">
-                <a th:href="@{/signUp}"> Sign Up</a>
-
-            </button>
-            <button type="button" class="btn btn-secondary btn-lg">
-                <a th:href="@{/signIn}"> Sign In</a>
-            </button>
-        </div>
-        <div id="s1" class="container">
-            <img src="images/S1.jpg" class="img-fluid" alt="Responsive image" width="300" height="150"
-                align='right'>
-            <img src="images/Q2.jpg" class="img-fluid" alt="Responsive image" width="300" height="150">
-        </div>
-    </div>
-
-
-    <footer>
-        <div id="footer" class="container">
-
-            <div id="con" class="container">
-                <h2>Contact Us</h2>
-                <h4>phone:</h4>
-                <h4>email:example@gmail.com</h4>
-                <h4>address:5killo</h4>
-            </div>
-
-
-
-        </div>
-
-
-
-    </footer>
-
-    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+	<div class="container-fluid derash">
+		<div class="row">
+			<div class="col-md-12">
+				<nav class="navbar">
+					<ul class="nav">
+						<li>
+							<a class="nav-link" href="./html/about.html">ABOUT</a>
+						</li>
+						<li>
+							<a class="nav-link" href="./html/contact.html">CONTACT</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-md-7 offset-md-2 info">
+				<h1 class="text-center">ደራሽ</h1>
+				<p class="text-center">
+				Welcome to DERASH website click the button below to start
+				</p>
+				<a href="#" class="btn btn-md text-center">GET START</a>
+			</div>
+		</div>
+	</div>
 </body>
-
 </html>
