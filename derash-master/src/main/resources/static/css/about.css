@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about{
+    background-image:url('../images/bgblurr.png'),url("../images/derash.jpg");
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    padding: 118px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.content-section{
+    width: 55%;
+    float: left;
+    background-color: #535353;
+    opacity: .65;
+    padding: 140px;
+    border-radius: 2em;
+}
+h1{
+    margin-bottom: 30px;
+    padding-left: 7vw;
+    font-size: 30px;
+    font-weight: bolder;
+    color: azure;
+    text-decoration: underline;
+}
+p{
+    font-size: 20px;
+    color: #f1e7e7;
+    text-align: center;
+    margin-bottom: 40px;
+}
+button{
+    font-size: 25px;
+    border: none;
+    padding: 5px;
+    background-color: #028b27;
+    color: white;
+}
+button:hover{
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: underline;
+}
+@media screen and (max-width:1200px){
+    .content-section{
+        padding: 100px;
+    }
+}
+@media screen and (max-width:1000px){
+    .about{
+        /* background-size: 100%; */
+        padding: 100px 50px;
+        background-repeat: repeat-y;
+    }
+    .content-section{
+        width: 80%;
+    
+    }
+}
+
+@media screen and (max-width:600px){
+    .about{
+        padding: 0px;
+    }
+    .content-section{
+        padding: 60px;
+        width: 100%;
+    }
+    .home button{
+        font-size: 19px;
+        padding: 5px;
+        width: 160px;
+    }
+}
