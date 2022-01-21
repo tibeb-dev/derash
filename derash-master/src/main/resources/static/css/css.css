@@ -107,18 +107,4 @@ padding : 12px 0 0 0;
     visibility: hidden;
     color : white;
     }
-    /* make the page responsive */
-
-    @media only screen and (max-width: 705px) {
-        /* body {
-          background-color: lightblue;
-        } */
-        .d-flex justify-content-center h-100{
-            margin-top: -4rem;
-        }
-        h3{
-            color: red;
-        }
-      }
-    
 

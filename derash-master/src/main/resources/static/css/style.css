@@ -57,13 +57,3 @@ body {
   background: #0e0005;
   text-decoration: underline;
 }
-@media only screen and (max-width: 600px) {
-  .derash .info p{
-    color: red;
-    font-size: 8em;
-  font-weight: 500;
-  color: rgb(250, 250, 250);
-  font-weight: bolder;
-  letter-spacing: 3px;
-  }
-}
