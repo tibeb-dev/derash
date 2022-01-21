@@ -66,10 +66,10 @@ public class DerashController {
 	    	int length = String.valueOf(signup.getPassword()).length();
 	    	
 	    	System.out.print(length);
-	    	
-	    	if(length <= 8) {
-	    		return "error";
-	    	}
+//	    	
+//	    	if(length <= 8) {
+//	    		return "error";
+//	    	}
 	    	
 	    	BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 	        String encodedPassword = passwordEncoder.encode(signup.getPassword());
@@ -99,10 +99,10 @@ public class DerashController {
 	    @PostMapping("/logged")
 	    public String processRegister(@ModelAttribute LoginPage signin, BindingResult result, Model model ) {
 	        model.addAttribute("signin", new LoginPage());
-
-	    	 if (result.hasErrors()) {
-	             return "signup page";
-	         }
+//
+//	    	 if (result.hasErrors()) {
+//	             return "signup page";
+//	         }
 	    	
 	    	
 	    	String stripedEmail = signin.getEmail().strip();
