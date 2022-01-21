@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <title>report</title>
+</head>
+<body>
+    <div class="container">
+        <form method="POST" th:action="@{/report}" th:object="${report}">
+            <div>
+                <label class="form-label mt-2">Location</label>
+                <input
+                  type="text"
+                  th:class="|form-control ${#fields.hasErrors('location')? 'is-invalid': 'is-valid'}|"
+                  class="form-control w-50"
+                  th:field="*{location}"
+                />
+                <div
+                  class="invalid-feedback"
+                  th:if="${#fields.hasErrors('location')}"
+                  th:errors="*{location}"
+                ></div>
+            </div>
+            
+           
+            <div>
+                    <label  class="form-label mt-2">Date</label>
+                    <input
+                      type="date"
+                      th:class="|form-control ${#fields.hasErrors('date')? 'is-invalid': 'is-valid'}|"
+                      class="form-control w-50"
+                      th:field="*{date}"
+                    />
+                    <div
+                      class="invalid-feedback"
+                      th:if="${#fields.hasErrors('date')}"
+                      th:errors="*{date}"
+                    ></div>
+            </div>
+
+            <div>
+                <label  class="form-label mt-2">Local time</label>
+                <input
+                  type="time"
+                  th:class="|form-control ${#fields.hasErrors('time')? 'is-invalid': 'is-valid'}|"
+                  class="form-control w-50"
+                  th:field="*{time}"
+                />
+                <div
+                  class="invalid-feedback"
+                  th:if="${#fields.hasErrors('time')}"
+                  th:errors="*{time}"
+                ></div>
+
+              <div>
+                  <label  class="form-label mt-2">Describe the incident</label>
+                  <textarea th:class="|form-control ${#fields.hasErrors('description')? 'is-invalid': 'is-valid'}|"
+                  class="form-control w-50"
+                  th:field="*{description}">
+
+                  </textarea>
+                  
+                  <div
+                    class="invalid-feedback"
+                    th:if="${#fields.hasErrors('description')}"
+                    th:errors="*{description}"
+                  ></div>
+              </div>
+            
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+           
+              
+        </form>
+        
+      </div>
+      <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

@@ -14,7 +14,7 @@
 	<name>derash</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -36,6 +36,11 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+
+		
+
+
+
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
