@@ -14,7 +14,7 @@
         <header>
             <h1>Fill the forms below to submit your report</h1>
         </header>
-      <form>
+      <form th:action="@{/report}" method="POST">
         <div class="form">
             <div>
               <div class="contact-form">
@@ -39,8 +39,13 @@
                 <input type="file" required>
                 <span>Add image or video(if possible) :</span>
             </div>
+            <small id="succes" class="success-message">message</small>
+            <div id='seconds-counter'> </div>
                      <div class="contact-form">
-                  <input type="submit" name="submit">
+                  <button class="submit-form" type="submit" name="submit" id="submit" >submit</button>
+                </div>
+                <div >
+                  <button class="cancel-form" type="submit" name="submit" id="unsubmit" >cancel submit</button>
                 </div>
               </div>
               </div>
@@ -48,6 +53,7 @@
           </div>     
     </form>
     <div class="logout"><a href="/">Logout</a></div>
+    <script src="javascript/cancelSubmition.js"></script>
 </body>
 
 </html> 

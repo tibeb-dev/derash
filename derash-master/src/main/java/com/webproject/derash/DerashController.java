@@ -49,6 +49,13 @@ public class DerashController {
 	        return "login page";
 	    }
 	    
+	    @PostMapping("/report")
+	    public String report(Model model) {
+	        model.addAttribute("report", new LoginPage());
+
+	        return "home";
+	    }
+	    
 	  
 	    @PostMapping("/registered")
 	    public String processRegister(@ModelAttribute RegisterPage signup, Model model) {

@@ -77,15 +77,16 @@
     transform: translateY(-20px);
     pointer-events: none;
   }
-  .contact-form input[type="submit"] {
-    background-color: lightseagreen;
+   .submit-form{
+	background-color: lightseagreen;
     border-style: none;
     font-size: 18px;
     width: 50%;
     height: 40px;
     margin-bottom: 10px;
-  }
-  .contact-form input[type="submit"]:hover {
+        
+}
+.submit-form:hover {
     background-color: black;
     text-decoration: underline;
     cursor: pointer;
@@ -100,6 +101,27 @@
     font-size: 18px;
     bottom: 0;
   }
+  .cancel-form{
+	
+	 background-color: lightseagreen;
+    border-style: none;
+    font-size: 18px;
+    width: 50%;
+    height: 40px;
+    margin-left: 294px;
+    margin-top: -49px;
+}
+.cancel-form:hover {
+    background-color: black;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .success-message{
+	color : green;
+	visibility : hidden;
+	
+	
+}
   /* li{
       margin: 20px 15px;
   } */
