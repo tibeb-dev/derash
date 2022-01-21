@@ -73,7 +73,7 @@ public class DerashController {
 	        signup.setEmail(stripedEmail);
 	        
 	        registerRepo.save(signup);
-	        return "home";
+	        return "login page";
 
 //	        RegisterPage emailInDatabase = crudRegisterRepo.findByEmail(user.getEmail());
 //	        System.out.print(emailInDatabase != null); 
