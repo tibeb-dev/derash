@@ -35,9 +35,13 @@
         </div>
         <form>
             <div class="mb-3">
-                <label for="location" class="form-label">location</label>
-                <input type="text" class="form-control" name="location" id="location" >
-              </div>
+                <label for="location" class="form-label">Near police station</label>
+				<select name="station" id="station">
+				    <option value="5kilo">5kilo</option>
+				    <option value="4kilo">4kilo</option>
+				    <option value="6kilo">6kilo</option>
+				  </select>    
+				  </div>
               <div class="mb-3">
                 <label for="date" class="form-label">Date</label>
                 <input type="date" class="form-control" name="date" id="date" >
@@ -48,7 +52,7 @@
               </div>
              
               <div class="mb-3">
-                <label for="description" class="form-label">Describe the  incident</label>
+                <label for="description" class="form-label">Describe the  incident with four word</label>
                 <textarea class="form-control" name="description" id="description" rows="6"></textarea>
               </div>
               <div class="mb-3">

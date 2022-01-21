@@ -31,7 +31,7 @@
 					<h3>Sign In</h3>
 				</div>
 				<div class="card-body">
-					<form th:action="@{/logged}" th:object="${user}"
+					<form th:action="@{/logged}" th:object="${signin}"
             method="post" >
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
@@ -54,7 +54,7 @@
 
 				<div class="card-footer">
 					<div class="d-flex justify-content-center links">
-						don't have an account <a href="/signUp">signup</a>
+						don't have an account &ensp;<a href="/signUp">create account</a>
 					</div>
 				</div>
 				<div class="social_icon">

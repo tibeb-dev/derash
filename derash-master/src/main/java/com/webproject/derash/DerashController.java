@@ -29,60 +29,77 @@ public class DerashController {
 	    public String viewHomePage() {
 	        return "home";
 	    }
+	    
 	    @GetMapping("/signUp")
 	    public String signUpForm(Model model) {
-	        model.addAttribute("user", new RegisterPage());
-	         
+	        model.addAttribute("signup", new RegisterPage());
+
 	        return "signup page";
 	    }
+	    
+	    @GetMapping("/about")
+	    public String aboutPage(Model model) {
+	        return "about";
+	    }
+	    
 	    @GetMapping("/signIn")
 	    public String signInForm(Model model) {
-	        model.addAttribute("user", new LoginPage());
-	         
+	        model.addAttribute("signin", new LoginPage());
+
 	        return "login page";
 	    }
 	    
 	  
 	    @PostMapping("/registered")
-	    public String processRegister(@ModelAttribute RegisterPage user, Model model) {
-	    	System.out.print("ajvhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
-	    	int length = String.valueOf(user.getPassword()).length();
-	    	 System.out.print(length);
+	    public String processRegister(@ModelAttribute RegisterPage signup, Model model) {
+	        model.addAttribute("signup", new RegisterPage());
 	    	
+	    	System.out.print("ajvhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
+	    	
+	    	int length = String.valueOf(signup.getPassword()).length();
+	    	
+	    	System.out.print(length);
+	    	
+	    	if(length <= 8) {
+	    		return "error";
+	    	}
 	    	
 	    	BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-	        String encodedPassword = passwordEncoder.encode(user.getPassword());
-	        String stripedEmail = user.getEmail().strip();
+	        String encodedPassword = passwordEncoder.encode(signup.getPassword());
+	        String stripedEmail = signup.getEmail().strip();
 	        System.out.print(stripedEmail);
 	        
-	        user.setPassword(encodedPassword);
-	        user.setEmail(stripedEmail);
+	        signup.setPassword(encodedPassword);
+	        signup.setEmail(stripedEmail);
 	        
+	        registerRepo.save(signup);
+	        return "home";
 
-	        RegisterPage emailInDatabase = crudRegisterRepo.findByEmail(user.getEmail());
-	        System.out.print(emailInDatabase != null); 
-	        System.out.print(emailInDatabase);
-
-	        if (emailInDatabase == null) {
-	        	 registerRepo.save(user);
-	 	        
-	 	        return "home";
-	        }
-	        else {
-	            return "signup page";
-	        }
-	 
+//	        RegisterPage emailInDatabase = crudRegisterRepo.findByEmail(user.getEmail());
+//	        System.out.print(emailInDatabase != null); 
+//	        System.out.print(emailInDatabase);
+//
+//	        if (emailInDatabase == null) {
+//	        	 registerRepo.save(user);
+//	 	        
+//	 	        return "home";
+//	        }
+//	        else {
+//	            return "signup page";
+//	        }
+//	 
 	    }
 	    @PostMapping("/logged")
-	    public String processRegister( LoginPage user, BindingResult result ) {
-	  
+	    public String processRegister(@ModelAttribute LoginPage signin, BindingResult result, Model model ) {
+	        model.addAttribute("signin", new LoginPage());
+
 	    	 if (result.hasErrors()) {
 	             return "signup page";
 	         }
 	    	
 	    	
-	    	String stripedEmail = user.getEmail().strip();
-		        user.setEmail(stripedEmail);
+	    	String stripedEmail = signin.getEmail().strip();
+	    	signin.setEmail(stripedEmail);
 	        
 	         
 	        return "report page";

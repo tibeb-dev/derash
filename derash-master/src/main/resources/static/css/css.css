@@ -57,7 +57,7 @@ color: white;
 position: absolute;
 
 top: 100%;
-margin-left: 75%;
+margin-left: 60%;
 display: flex;
 }
 
@@ -101,3 +101,10 @@ background-color: white;
 color: white;
 padding : 12px 0 0 0;
 }
+
+.error-message {
+    margin-bottom: 4px;
+    visibility: hidden;
+    color : white;
+    }
+

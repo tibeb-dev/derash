@@ -1,7 +1,5 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+
 
 <!DOCTYPE html>
 <html>
@@ -32,7 +30,7 @@
 
 				</div>
 				<div class="card-body">
-					<form th:action="@{/registered}" th:object="${user}"
+					<form th:action="@{/registered}" th:object="${signup}"
             method="post" >
 						
 
@@ -50,7 +48,7 @@
 
 
 							</div>
-							<input type="password" th:field="*{password}" class="form-control" placeholder="password" required>
+							<input type="password" id="password-1" th:field="*{password}" class="form-control" placeholder="password" required>
 							<i class="far fa-eye" id="togglePassword"></i>
 						</div>
 						<div class="input-group form-group">
@@ -59,13 +57,13 @@
 
 
 							</div>
-							<input type="password" class="form-control" placeholder="retype password">
+							<input type="password" id="password-2" class="form-control" placeholder="retype password">
 							<i class="far fa-eye" id="togglePassword"></i>
 						</div>
 						
-
+							<small  class = "error-message"id="error-message">error message</small>
 						<div class="form-group">
- 							<button type="submit" class="btn float-right login_btn">Sign Up</button>
+ 							<button type="submit" id="submit"class="btn float-right login_btn">Sign Up</button>
 						</div>
 					</form>
 				</div>
@@ -73,16 +71,15 @@
 					<div class="d-flex justify-content-center links">
 						I have already an account &ensp; <a href="/signIn"> login</a>
 					</div>
-					<div class="social_icon">
-						<span><i class="fab fa-facebook-square"></i></span>
-						<span><i class="fab fa-google-plus-square"></i></span>
-						<span><i class="fab fa-twitter-square"></i></span>
-					</div>
+					
 
 				</div>
 			</div>
 		</div>
 	</div>
-</body>
 
+<script src="javascript/passwordConfirm.js"></script>
+s</body>
+	
 </html>
+
