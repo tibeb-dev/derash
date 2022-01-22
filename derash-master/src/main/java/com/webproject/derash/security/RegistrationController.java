@@ -26,14 +26,26 @@ public class RegistrationController {
      return "registeration";
    }
 
-   @PostMapping("/register")
-   public String processRegistration( @Valid User user,Errors errors, RegistrationForm form) {
-      if(errors.hasErrors()){
+  @PostMapping("/register")
+   public String processRegistration( @Valid User user,BindingResult result, RegistrationForm form) {
+    User existing1 = userRepository.findByUsername(user.getUsername());
+    User existing2 = userRepository.findByEmail(user.getEmail());
+
+    if (existing1 != null){
+      result.rejectValue("username", null, "There is already an account registered with that username");
+     }
+     if (existing2 != null){
+      result.rejectValue("email", null, "There is already an account registered with that eamil");
+     }
+
+    if(result.hasErrors()){
         return "registeration";
       }
-       userRepository.save(form.toUser(passwordEncoder));
-       return "redirect:/login";
-   }
+      
+      
+    userRepository.save(form.toUser(passwordEncoder));
+    return "redirect:/login";
+  }
 
 
 }
