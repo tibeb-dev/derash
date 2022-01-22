@@ -5,7 +5,7 @@ import javax.validation.Valid;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.Errors;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +26,7 @@ public class RegistrationController {
      return "registeration";
    }
 
-  @PostMapping("/register")
+   @PostMapping("/register")
    public String processRegistration( @Valid User user,BindingResult result, RegistrationForm form) {
     User existing1 = userRepository.findByUsername(user.getUsername());
     User existing2 = userRepository.findByEmail(user.getEmail());
