@@ -68,7 +68,7 @@
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password"  th:field="*{password}" class="form-control"
+							<input type="password" id="password-1" th:field="*{password}" class="form-control"
 							th:class="|form-control ${#fields.hasErrors('password')? 'is-invalid': 'is-valid'}|" placeholder="password" required>
 							
 							<div
@@ -82,7 +82,7 @@
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password"  th:field="*{confirmpassword}" class="form-control"
+							<input type="password" id="password-2" th:field="*{confirmpassword}" class="form-control"
 							th:class="|form-control ${#fields.hasErrors('confirmpassword')? 'is-invalid': 'is-valid'}|" placeholder="confirm password" required>
 							
 							<div
@@ -111,9 +111,10 @@
 			</div>
 		</div>
 	</div>
+	
 
-<script src="javascript/passwordConfirm.js"></script>
-s</body>
+<script src="@{/javascript/passwordConfirm.js}"></script>
+</body>
 	
 </html>
 

@@ -37,6 +37,9 @@ public class RegistrationController {
      if (existing2 != null){
       result.rejectValue("email", null, "There is already an account registered with that eamil");
      }
+     if (!(form.getPassword().equals(form.getConfirmpassword()) )){
+      result.rejectValue("confirmpassword", null, "confirm password should match the password");
+     }
 
     if(result.hasErrors()){
         return "registeration";

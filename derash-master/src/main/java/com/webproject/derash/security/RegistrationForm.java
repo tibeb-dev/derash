@@ -15,7 +15,7 @@ public class RegistrationForm {
        User user = new User();
        user.setUsername(this.username);
        user.setPassword(encoder.encode(this.password));
-       user.setConfirmpassword(this.confirmpassword);
+       user.setConfirmpassword(encoder.encode(this.confirmpassword));
        user.setEmail(this.email);
        return user;
    }
