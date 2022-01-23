@@ -63,18 +63,21 @@
                 ></div>
               </div>
 
-              
+              <small id="success" class="succes" >message </small>
 
               <div class="contact-form">
-                <input type="submit" name="submit">
+                <input id="submit type="submit" name="submit">
               </div>
-           
+           <div class="cancel-form">
+                <input id="unsubmit" type="submit" name="submit">
+              </div>
         
         </div>     
     </form>
     <form th:action="@{/logout}" method="post">
         <input type="submit" class="btn btn-info" value="Logout" />
     </form>
+    <script src="javascript/cancelSubmition.js">
 </body>
 
-</html> 
+</html>
