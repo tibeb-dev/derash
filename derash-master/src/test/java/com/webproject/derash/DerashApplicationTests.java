@@ -6,9 +6,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class DerashApplicationTests {
 
-	public DerashApplicationTests() {
-	}
-
 	@Test
 	void contextLoads() {
 	}
