@@ -1,0 +1,80 @@
+<html lang="en" xmlns:th="https://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <title>Report</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/report.css}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body >
+    <div>
+        <header>
+            <h1>Fill the forms below to submit your report</h1>
+        </header>
+      <form method="POST" th:action="@{/report}" th:object="${report}">
+        <div class="form">
+           
+              <div class="contact-form">
+                  <input type="text" th:field="*{location}" 
+                  th:class="|form-control ${#fields.hasErrors('location')? 'is-invalid': 'is-valid'}|" required>
+                  <span>Location :</span>
+                  <div
+                  class="invalid-feedback"
+                  th:if="${#fields.hasErrors('location')}"
+                  th:errors="*{location}"
+                ></div>
+
+              </div>
+
+               <div class="contact-form">
+                  <input type="date"  th:field="*{date}"
+                  th:class="|form-control ${#fields.hasErrors('date')? 'is-invalid': 'is-valid'}|" required>
+                  <span>Date :</span>
+                  <div
+                  class="invalid-feedback"
+                  th:if="${#fields.hasErrors('date')}"
+                  th:errors="*{date}"
+                ></div>
+              </div>
+
+              <div class="contact-form">
+                <input type="time" th:field="*{time}" 
+                th:class="|form-control ${#fields.hasErrors('time')? 'is-invalid': 'is-valid'}|" required>
+                <span>Time :</span>
+                <div
+                  class="invalid-feedback"
+                  th:if="${#fields.hasErrors('time')}"
+                  th:errors="*{time}"
+                ></div>
+              </div>
+
+              <div class="contact-form">
+                  <textarea th:field="*{description}" th:class="|form-control ${#fields.hasErrors('description')? 'is-invalid': 'is-valid'}|"> 
+                  </textarea>
+                  <span>Describe the incident :</span>
+                  <div
+                  class="invalid-feedback"
+                  th:if="${#fields.hasErrors('description')}"
+                  th:errors="*{description}"
+                ></div>
+              </div>
+
+              
+
+              <div class="contact-form">
+                <input type="submit" name="submit">
+              </div>
+           
+        
+        </div>     
+    </form>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" class="btn btn-info" value="Logout" />
+    </form>
+</body>
+
+</html> 

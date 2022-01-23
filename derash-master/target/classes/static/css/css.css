@@ -29,7 +29,7 @@ align-content: center;
     }
 
 .card{
-height: 350px;
+height: 380px;
 margin-top: auto;
 margin-bottom: 60%;
 margin-left: 25%;
@@ -56,7 +56,7 @@ color: white;
 .social_icon{
 position: absolute;
 
-top: 100%;
+top: 115%;
 margin-left: 60%;
 display: flex;
 }
