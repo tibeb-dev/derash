@@ -31,6 +31,7 @@
 					<h3>Sign In</h3>
 				</div>
 				<div class="card-body">
+					<div th:if="${param.error}" class ="alert alert-danger">invalid username and password</div>
 					<form th:action="@{/login}" method="POST" >
 						<div class="input-group form-group">
 							<div class="input-group-prepend">

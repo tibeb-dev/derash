@@ -1,5 +1,7 @@
 package com.webproject.derash.security;
 
+import com.webproject.derash.entity.User;
+
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import lombok.Data;
@@ -11,7 +13,7 @@ public class RegistrationForm {
    private String confirmpassword;
    private String email;
 
-   User toUser(PasswordEncoder encoder) {
+   public User toUser(PasswordEncoder encoder) {
        User user = new User();
        user.setUsername(this.username);
        user.setPassword(encoder.encode(this.password));
