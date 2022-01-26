@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <title>Stations list</title>
+    <style>
+        .container{
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body class="alert alert-dark">
+    <div class="container">
+      <div class="container">
+        <h2> Stations in our database </h2>
+      </div>
+        <table class="table table-bordered table-dark">
+            <thead>
+              <tr >
+                <th scope="col">ID</th>
+                <th scope="col">Location</th>
+                <th scope="col">Email</th>
+                <th scope="col"></th>
+                
+              </tr>
+            </thead>
+            <tbody th:each="station:${stations}">
+              <tr>
+                
+                <td th:text="${station.id}"></td>
+                <td th:text="${station.location}"></td>
+                <td th:text="${station.email}"></td>
+                <td >
+                  <form th:action="@{delete}" method="post">
+                      <input type="hidden" name="id" th:value="${station.id}" />
+                      <button class="btn btn-danger" type="submit">Delete</button>
+                  </form>
+                </td>
+              </tr>
+             
+            </tbody>
+
+          </table>
+          <div class="container">
+            <h2> Add new sation to the table</h2>
+          </div>
+          
+
+          <form  th:action="@{/stations}" method="post" th:object="${police_station}" >
+            
+
+            <div class="contact-form">
+              <span>Location :</span>
+              <input type="text"  th:field="*{location}" 
+              th:class="|form-control ${#fields.hasErrors('location')? 'is-invalid': 'is-valid'}|" >
+              
+              <div
+              class="invalid-feedback"
+              th:if="${#fields.hasErrors('location')}"
+              th:errors="*{location}"
+            ></div>
+          </div>
+
+          <div class="contact-form">
+            <span>Email :</span>
+            <input type="email"  th:field="*{email}" 
+            th:class="|form-control ${#fields.hasErrors('email')? 'is-invalid': 'is-valid'}|" >
+            
+            <div
+            class="invalid-feedback"
+            th:if="${#fields.hasErrors('email')}"
+            th:errors="*{email}"
+          ></div>
+        </div>
+
+            
+              <div class=" container contact-form">
+                <input type="submit" value="Add Station">
+              </div>
+            
+          </form >
+
+         
+
+        </div>
+       
+         
+
+    
+</body>
+</html>

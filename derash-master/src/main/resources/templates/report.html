@@ -15,23 +15,29 @@
         <header>
             <h1>Fill the forms below to submit your report</h1>
         </header>
-      <form method="POST" th:action="@{/report}" th:object="${report}">
+      <form method="POST" th:action="@{/report}" th:object="${report}" enctype="multipart/form-data">
         <div class="form">
-           
-              <div class="contact-form">
-                  <input type="text" th:field="*{location}" 
-                  th:class="|form-control ${#fields.hasErrors('location')? 'is-invalid': 'is-valid'}|" required>
-                  <span>Location :</span>
-                  <div
-                  class="invalid-feedback"
-                  th:if="${#fields.hasErrors('location')}"
-                  th:errors="*{location}"
-                ></div>
+          
+           <div class="contact-form">
+            
+            <span>Location :</span>
+            <select th:field="*{location}" class ="input">
+              <option th:each="station:${stations}" th:value="${station.location}" th:text="${station.location}">
+                
+              </option>
+              
+            </select>
+            
+          </div>
+          
+            
+            
+              
 
-              </div>
+              
 
                <div class="contact-form">
-                  <input type="date"  th:field="*{date}"
+                  <input type="date"  th:field="*{date}" class="input"
                   th:class="|form-control ${#fields.hasErrors('date')? 'is-invalid': 'is-valid'}|" required>
                   <span>Date :</span>
                   <div
@@ -42,7 +48,7 @@
               </div>
 
               <div class="contact-form">
-                <input type="time" th:field="*{time}" 
+                <input type="time" th:field="*{time}" class="input"
                 th:class="|form-control ${#fields.hasErrors('time')? 'is-invalid': 'is-valid'}|" required>
                 <span>Time :</span>
                 <div
@@ -62,22 +68,24 @@
                   th:errors="*{description}"
                 ></div>
               </div>
+             
 
-              <small id="success" class="succes" >message </small>
+             
+             <small id="succes" class="succes">message</small>
 
-              <div class="contact-form">
-                <input id="submit type="submit" name="submit">
-              </div>
-           <div class="cancel-form">
-                <input id="unsubmit" type="submit" name="submit">
-              </div>
+              <button class="submit" id="submit" value="submit">submit</button>
+
+              
+
+            
+           
         
         </div>     
     </form>
     <form th:action="@{/logout}" method="post">
-        <input type="submit" class="btn btn-info" value="Logout" />
+        <input type="submit" class="logout" value="Logout" />
     </form>
-    <script src="javascript/cancelSubmition.js">
+    
 </body>
 
-</html>
+</html> 

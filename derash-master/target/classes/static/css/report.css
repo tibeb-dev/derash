@@ -40,6 +40,19 @@
     min-height: 105vh;
   }
   
+   .input {
+    width: 30rem;
+    background-color: transparent;
+    border: 0;
+    border: transparent;
+    margin: 1.7vw;
+    padding: 0.65vw;
+    font-size: 15px;
+    border-bottom: 3px solid #fff;
+  }
+  .input option{
+    background-color: grey;
+  }
   .form .contact-form input {
     width: 30rem;
     background-color: transparent;
@@ -78,15 +91,17 @@
     transform: translateY(-20px);
     pointer-events: none;
   }
-  .contact-form input[type="submit"] {
+  .submit{
     background-color: lightseagreen;
     border-style: none;
     font-size: 18px;
-    width: 50%;
+    width: 29%;
     height: 40px;
     margin-bottom: 10px;
+   
+    
   }
-  .contact-form input[type="submit"]:hover {
+  .submit:hover {
     background-color: black;
     text-decoration: underline;
     cursor: pointer;
@@ -94,13 +109,32 @@
   .logout {
     background-color: lightseagreen;
     width: 10%;
-    text-align: center;
+    
     text-decoration: none;
-    float: right;
+    
     border-style: none;
     font-size: 18px;
-    bottom: 0;
+    
   }
+  .unsubmit{
+	 background-color: lightseagreen;
+    border-style: none;
+    font-size: 18px;
+    width: 29%;
+    height: 40px;
+    margin-bottom: 10px;
+    
+}
+.unsubmit:hover {
+    background-color: black;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+.succes{
+	visibility : hidden;
+	color:green;
+}
+
   /* li{
       margin: 20px 15px;
   } */

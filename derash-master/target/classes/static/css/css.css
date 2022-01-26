@@ -20,6 +20,7 @@ align-content: center;
     margin-bottom: 60%;
     margin-left: 25%;
     width: 400px;
+    
     background-color: rgba(0,0,0,0.5) !important;
     border-color: gray;
     }
@@ -29,11 +30,12 @@ align-content: center;
     }
 
 .card{
-height: 380px;
+height: 350px;
 margin-top: auto;
 margin-bottom: 60%;
 margin-left: 25%;
 width: 400px;
+height:380px;
 background-color: rgba(0,0,0,0.5) !important;
 border-color: gray;
 }
@@ -56,7 +58,7 @@ color: white;
 .social_icon{
 position: absolute;
 
-top: 115%;
+top: 100%;
 margin-left: 60%;
 display: flex;
 }
@@ -99,7 +101,7 @@ background-color: white;
 
 .links{
 color: white;
-padding : 12px 0 0 0;
+padding : 0 0 77px 0;
 }
 
 .error-message {

@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image:url('../images/bgblurr.png'),url("../images/derash.jpg");
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    padding: 118px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.content-section{
+
+    float: left;
+    background-color: #f0e9e9;
+    opacity: .65;
+    padding: 140px;
+    border-radius: 2em;
+}
+h1{
+    margin-bottom: 30px;
+    padding-left: 7vw;
+    font-size: 3em;
+    font-weight: bolder;
+    color: WHITE;
+  
+}
+li{
+    font-size: 2em;
+    color:rgb(99, 49, 13);
+}
+h2{
+    color: #1fcac2;
+}
+button{
+    font-size: 25px;
+    border: none;
+    padding: 5px;
+    background-color: green;
+    color: white;
+    margin:auto;
+    display:block;
+    text-decoration: none;
+}
+button:hover{
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+}
+@media screen and (max-width:1200px){
+    .content-section{
+        padding: 100px;
+    }
+}
+@media screen and (max-width:1000px){
+    .about{
+        /* background-size: 100%; */
+       
+        background-repeat: repeat-y;
+    }
+    .content-section{
+        width: 80%;
+    
+    }
+}
+
+@media screen and (max-width:600px){
+    .about{
+        padding: 0px;
+    }
+    .content-section{
+        padding: 60px;
+        width: 100%;
+    }
+    .button button{
+        font-size: 19px;
+        padding: 5px;
+        width: 160px;
+    }
+}

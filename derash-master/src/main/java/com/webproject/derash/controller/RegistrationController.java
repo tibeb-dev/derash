@@ -36,7 +36,7 @@ public class RegistrationController {
    public String processRegistration( @Valid User user,BindingResult result, RegistrationForm form) {
     User existing1 = userRepository.findByUsername(user.getUsername());
     User existing2 = userRepository.findByEmail(user.getEmail());
-
+  
     if (existing1 != null){
       result.rejectValue("username", null, "There is already an account registered with that username");
      }

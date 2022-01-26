@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="https://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <title>noaccess</title>
+</head>
+<body>
+    <div class="container">
+        
+          <div sec:authorize="hasRole('ROLE_ADMIN')" class="container"> 
+            <div class="alert alert-danger" role="alert">
+                <h2>this page is for users with role 'USER'</h2> 
+              </div>
+            <a  class="btn btn-primary" th:href="@{/stations}" role="button">GO TO stations</a>
+        </div>
+
+        
+
+
+        <div sec:authorize="hasRole('ROLE_USER')" class="container"> 
+            <div class="alert alert-danger" role="alert">
+            <h2>this page is for users with role 'ADMIN'</h2>
+            <a  class="btn btn-primary" th:href="@{/report}" role="button">Make Report</a>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

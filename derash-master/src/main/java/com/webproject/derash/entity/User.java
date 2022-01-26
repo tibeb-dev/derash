@@ -17,22 +17,25 @@ import javax.validation.constraints.NotBlank;
 
 import javax.validation.constraints.Size;
 
-
-
-
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-@Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+@Entity
 
 
      
 
 public class User{
-    @Id
+    
+
+    
+
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
@@ -46,7 +49,8 @@ public class User{
 
     @Column(nullable = false, unique = true)
     @NotBlank(message = "email mustnot be empty")
-    @Email(message = "Email is not valid")
+    @Email( message = "invalid email",regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@" 
+    	    + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$")
     private String email;
 
     @Column(nullable = false)

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://wwww.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/welcome.css}" />
+    
+  </head>
+  <body>
+    <div class="about">
+      
+        
+        
+         
+          <div sec:authorize="hasRole('ROLE_USER')" >
+            
+           <h1>  Welcome to DERASH website click the button below to report</h1>
+            <div class="button">
+             <a href="/report" ><button>REPORT</button></a>
+               
+              </div>
+          </div>
+          <div sec:authorize="hasRole('ROLE_ADMIN')" >
+          
+           <h1>  Welcome to DERASH website click the button below to see the stations</h1>
+          
+            
+            <div class="button">
+                <a href="/stations"> <button>STATIONS</button></a>
+              </div>
+         
+        
+        
+      </div>
+    </div>
+  </body>
+</html>

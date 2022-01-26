@@ -41,17 +41,24 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
         .authorizeRequests()
+        .antMatchers("/welcome").authenticated()
+        .antMatchers("/noaccess").authenticated()
         .antMatchers("/report").hasRole("USER")
+        .antMatchers("/stations").hasRole("ADMIN")
         .antMatchers("/*").permitAll()  
         .and()
         .formLogin()
         .loginPage("/login")
-        .defaultSuccessUrl("/report")
-        .permitAll()
+        
+        .defaultSuccessUrl("/welcome")
+        
         .and()
         .logout()
-        
+        .logoutSuccessUrl("/login")
         .permitAll()
+        .and()
+        .exceptionHandling()
+        .accessDeniedPage("/noaccess")
         ;
     }
 }

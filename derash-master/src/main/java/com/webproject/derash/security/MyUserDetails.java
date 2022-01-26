@@ -19,25 +19,7 @@ public class MyUserDetails implements UserDetails {
     public MyUserDetails(User user) {
         this.user = user;
     }
- /*
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        Set<Role> roles = user.getRoles();
-        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-         
-        for (Role role : roles) {
-            authorities.add(new SimpleGrantedAuthority(role.getName()));
-        }
-         
-        return authorities;
-    }
- 
 
-        @Override
-        public Collection<? extends GrantedAuthority> getAuthorities() {
-            
-        return Arrays.asList(new SimpleGrantedAuthority(user.getRole()));
-        }*/
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
     return Arrays.asList(new SimpleGrantedAuthority("ROLE_"+user.getRole()));

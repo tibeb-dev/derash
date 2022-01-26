@@ -1,0 +1,55 @@
+.fa-check-circle{
+    color: green;
+    margin: auto;
+    display: block;
+    margin-top: 4vw;
+    text-align:center;
+}
+p{
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 15px;
+    margin: 1vw;
+}
+
+.fa-wifi-exclamation{
+	color: red;
+    margin: auto;
+    display: block;
+    margin-top: 4vw;
+    text-align:center;
+}
+  .logout {
+    background-color: lightseagreen;
+    width: 10vw;
+    text-decoration: none;
+    border-style: none;
+    font-size: 18px;
+    float:right;
+    margin:2vw 20vw 0 0 ;
+    
+  }
+  
+  .back{
+	text-align: center;
+	background-color: lightseagreen;
+    width: 10vw;
+    color: black;
+    text-decoration: none;
+    align-items: center;
+    border-style: none;
+    font-size: 22px;
+    float:left;
+    margin:2vw 0 0 20vw;
+}
+.report{
+	text-align: center;
+	background-color: lightseagreen;
+    
+    color: black;
+    text-decoration: none;
+        border-style: none;
+    font-size: 18px;
+    float:left;
+    margin:2vw 0 0 20vw;
+}
